@@ -1,7 +1,7 @@
 export default function CreateTripForm({ handleTripCreation }) {
 
   function createTrip(event){
-    trip =  {
+    let trip =  {
       location: event.target.location.value,
       startDate: event.target.startDate.value,
       endDate: event.target.endDate.value,
