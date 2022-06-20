@@ -1,4 +1,5 @@
 import CreateTripForm from "./CreateTripForm";
+import PreviewTrips from "./PreviewTrips"
 import { useState } from 'react';
 
 export default function Tripin() {
@@ -12,6 +13,7 @@ export default function Tripin() {
   return(
     <>
     <CreateTripForm handleTripCreation={handleTripCreation}/>
+    <PreviewTrips trips={trips}/>
     </>
   )
 }
