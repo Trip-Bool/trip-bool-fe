@@ -11,13 +11,17 @@ export default function PreviewTrips({ trips }) {
   return (
     <>
     <h1>PreviewTrips</h1>
-    {trips.map((trip, key) => (
-      <div key={trip.location}>
-        <h1>{trip.location}</h1>
-        <h2>{trip.startDate}</h2>
-        <h3>{trip.endDate}</h3>
-      </div>
-    ))}
+    {trips.length === 0 ?
+      <h3>Create A Trip For A Preview</h3>
+      :
+      trips.map((trip) => (
+        <div key={trip.location}>
+          <h1>{trip.location}</h1>
+          <h2>{trip.startDate}</h2>
+          <h3>{trip.endDate}</h3>
+        </div>
+      ))
+    }
     </>
   )
 }
