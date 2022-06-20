@@ -14,9 +14,9 @@ export default function LoginForm({ handleLogin }) {
     <fieldset>
       <legend>Please Log In</legend>
       <label htmlFor="username">Username</label>
-      <input name="username" />
+      <input type="text" name="username" />
       <label htmlFor="password">Password</label>
-      <input name="password" />
+      <input type="password" name="password" />
       <button type="submit">Log In</button>
     </fieldset>
    </form>
