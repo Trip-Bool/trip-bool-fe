@@ -1,6 +1,16 @@
-export default function CreateTripForm() {
+export default function CreateTripForm({ handleTripCreation }) {
+
+  function createTrip(event){
+    trip =  {
+      location: event.target.location.value,
+      startDate: event.target.startDate.value,
+      endDate: event.target.endDate.value,
+    }
+    handleTripCreation(trip)
+  }
+
   return(
-    <form>
+    <form onSubmit={createTrip}>
     <fieldset>
       <legend>Create A Trip</legend>
       <label htmlFor="location">Destination</label>
