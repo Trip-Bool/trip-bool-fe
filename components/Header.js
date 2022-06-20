@@ -1,6 +1,9 @@
 
 export default function Header({ username }) {
   return(
-    <h1>{username}</h1>
+    <>
+    <h2>Welcome {username || ""}</h2>
+    <h1>Tripin</h1>
+    </>
   )
 }
