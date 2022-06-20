@@ -22,7 +22,7 @@ export default function Home() {
 
     <Header username={loginInfo.username}/>
     {/* user should toggle between true and false based on if the user is logged in and authenticated or not. */}
-    {user ?
+    {true ?
       <Tripin />
     :
       <LoginForm handleLogin={handleLogin}/>
