@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 export default function Tripin() {
 
-  const [trips, setTrips] = useState({})
+  const [trips, setTrips] = useState([])
   function handleTripCreation(trip){
-    // tripdata = axios.get();//call out api with user input - assuming from this point forward that our api is return a list of trips
+    // tripdata = axios.get();//call out api with user input - assuming from this point forward that our api is return a list of object trips
     setTrips(tripdata);
   }
 
