@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Tripin from '../components/Tripin';
 import LoginForm from '../components/LoginForm';
+import Footer from '../components/Footer'
 import { useState } from 'react';
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -27,6 +28,8 @@ export default function Home() {
     :
       <LoginForm handleLogin={handleLogin}/>
     }
+
+    <Footer />
     </>
   )
 }
