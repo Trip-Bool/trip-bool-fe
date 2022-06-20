@@ -1,5 +1,7 @@
+import CreateTripForm from "./CreateTripForm";
+
 export default function Tripin() {
   return(
-    <h1>Tripin</h1>
+    <CreateTripForm />
   )
 }
