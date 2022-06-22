@@ -11,9 +11,9 @@ export default function Tripin() {
   }
 
   return(
-    <>
+    <div>
     <CreateTripForm handleTripCreation={handleTripCreation}/>
     <PreviewTrips trips={trips}/>
-    </>
+    </div>
   )
 }
