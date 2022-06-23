@@ -1,11 +1,13 @@
 export default function CreateTripForm({ handleTripCreation }) {
 
   function createTrip(event){
+    event.preventDefault()
     let trip =  {
       location: event.target.location.value,
-      startDate: event.target.startDate.value,
-      endDate: event.target.endDate.value,
+      startDate: new Date(event.target.startDate.value).getTime() / 1000,
+      endDate: new Date(event.target.endDate.value).getTime() / 1000,
     }
+    console.log("start:", trip.startDate)
     handleTripCreation(trip)
   }
 
