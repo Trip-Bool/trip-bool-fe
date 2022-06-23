@@ -10,7 +10,8 @@ export default function Home() {
 
   const [trips, setTrips] = useState([])
   async function handleTripCreation(trip){
-    let tripdata = await axios.get(`http://127.0.0.1:5000/weather/${trip.location}/${trip.startDate}/${trip.endDate}`);//call out api with user input - assuming from this point forward that our api is return a list of object trips
+    await axios.post("http://127.0.0.1:5000/data/create", trip)
+    let tripdata = await axios.get(`http://127.0.0.1:5000/weather/colegibbs0@gmail.com`);//call out api with user input - assuming from this point forward that our api is return a list of object trips
     setTrips(tripdata.data);
   }
   console.log(trips)
@@ -23,8 +24,8 @@ export default function Home() {
 
     <Header />
     {/* TODO: Create a conditional that says if the user is logged in show the Tripin page, if not take the user to the auth0 login*/}
-    <Tripin trips={trips} handleTripCreation={handleTripCreation}/>
-    {/* <DetailedTrip /> */}
+    {/* <Tripin trips={trips} handleTripCreation={handleTripCreation}/> */}
+    <DetailedTrip />
     <Footer />
     </div>
   )
