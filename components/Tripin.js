@@ -1,19 +1,19 @@
 import CreateTripForm from "./CreateTripForm";
 import PreviewTrips from "./PreviewTrips"
-import { useState } from 'react';
 
-export default function Tripin() {
 
-  const [trips, setTrips] = useState([])
-  function handleTripCreation(trip){
-    // tripdata = axios.get();//call out api with user input - assuming from this point forward that our api is return a list of object trips
-    setTrips(tripdata);
-  }
+export default function Tripin(props) {
+
+  // const [trips, setTrips] = useState([])
+  // function handleTripCreation(trip){
+  //   // tripdata = axios.get();//call out api with user input - assuming from this point forward that our api is return a list of object trips
+  //   setTrips(tripdata);
+  // }
 
   return(
     <div>
-    <CreateTripForm handleTripCreation={handleTripCreation}/>
-    <PreviewTrips trips={trips}/>
+    <CreateTripForm handleTripCreation={props.handleTripCreation}/>
+    <PreviewTrips trips={props.trips}/>
     </div>
   )
 }
