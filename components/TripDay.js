@@ -21,7 +21,7 @@ export default function TripDay({ day }) {
   let icon_url = `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
 
   return(
-    <div className="flex justify-between w-1/2 my-2 mr-2 bg-gray-500 rounded-xl">
+    <div className="flex justify-around w-1/2 my-2 mr-2 bg-gray-500 rounded-xl">
       <img className="m-3" src={icon_url} alt="weather icon"/>
       <p className="m-9 text-l">{day.date.weekday} {day.date.month} {day.date.day}</p>
       <p className="m-9 text-l">{day.temp}°F</p>

@@ -59,11 +59,11 @@ export default function Home() {
 
     {/* TODO: Create a conditional that says if the user is logged in show the Tripin page, if not take the user to the auth0 login*/}
     { rendHome ?
-      <Tripin trips={trips} handleTripCreation={handleTripCreation}/>
+      <Tripin trips={trips} fetchData={fetchData} handleTripCreation={handleTripCreation}/>
       :
       <TripDetails trips={trips}/>
     }
-    <Footer />
+    <Footer className="relative bottom-0"/>
     </div>
   )
 }
