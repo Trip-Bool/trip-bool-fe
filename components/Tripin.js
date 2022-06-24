@@ -12,7 +12,7 @@ export default function Tripin(props) {
   return(
     <div>
     <CreateTripForm handleTripCreation={props.handleTripCreation}/>
-    <button onClick={showPreview}>See A Preivew Of Your Trips</button>
+    <button className="bg-gray-300 w-1/4 my-7 mx-7 p-5 rounded-md" onClick={showPreview}>See A Preivew Of Your Trips</button>
     {preview ?
       <PreviewTrips trips={props.trips}/>
     :
