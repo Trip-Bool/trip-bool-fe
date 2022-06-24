@@ -2,7 +2,7 @@ import DetailedTrip from '../components/DetailedTrip';
 
 
 
-export default function TripDeatils({ trips }){
+export default function TripDetails({ trips }){
 
   trips = {
     "_userName": "yamas.chris@gmail.com",
