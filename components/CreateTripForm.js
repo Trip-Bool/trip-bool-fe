@@ -8,6 +8,7 @@ export default function CreateTripForm({ handleTripCreation }) {
       endDate: (event.target.endDate.value),
     }
     console.log("start:", trip.startDate)
+    event.target.reset();
     handleTripCreation(trip)
   }
 
