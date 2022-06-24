@@ -12,10 +12,10 @@ export default function Home() {
 
   
   const [trips, setTrips] = useState([])
-  useEffect(() => {
-    fetchData();
-    console.log("return from state", trips)
-  }, [])
+  // useEffect(() => {
+  //   fetchData();
+  //   console.log("return from state", trips)
+  // }, [])
 
   async function fetchData(){
     console.log(user)
